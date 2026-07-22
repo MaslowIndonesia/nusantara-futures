@@ -1,59 +1,49 @@
 <!doctype html><html lang=en><head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noindex,nofollow"><meta name=color-scheme content=light><title>NUSANTARA FUTURES</title>
+<meta name=viewport content="width=device-width,initial-scale=1"><title>NUSANTARA FUTURES</title>
 <style>
-:root{--bg:#f4f0e8;--panel:#fcfaf5;--line:#e4dccf;--line2:#eee7d9;--ink:#2c2721;--muted:#6f665a;--dim:#a89d8c;
---amb:#a05c33;--grn:#4f7a5e;--red:#b05244;--wash:#f6f1e6}
+:root{--bg:#060809;--panel:#0b0f13;--line:#1a212a;--ink:#d8e1e8;--muted:#68767f;--dim:#3c464f;
+--amb:#e0a43c;--grn:#3ddc97;--red:#ef6079}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);
-font:13px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
-font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
-::selection{background:#ead9c6}
-.wrap{max-width:1140px;margin:0 auto;padding:0 24px 80px}
-header{padding:22px 0 18px;display:flex;flex-wrap:wrap;gap:8px 22px;
+font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px 70px}
+header{border-bottom:1px solid var(--line);padding:16px 0 12px;display:flex;flex-wrap:wrap;gap:6px 18px;
 align-items:baseline;justify-content:space-between}
-.brand{font-size:17px;font-weight:700;letter-spacing:.14em;color:var(--amb)}
-.disc{font-size:12px;color:var(--muted);letter-spacing:.02em}
-.gen{font-size:11px;color:var(--dim)}
-section{margin-top:26px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px 24px 24px}
-h2{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);
-margin:0 0 6px;padding-bottom:10px;border-bottom:1px solid var(--line)}
-.sub{font-size:12px;color:var(--dim);margin:10px 0 12px;max-width:76ch}
+.brand{font-size:16px;font-weight:600;letter-spacing:.12em;color:var(--amb)}
+.disc{font-size:11px;color:var(--muted);letter-spacing:.03em}
+.gen{font-size:10px;color:var(--dim)}
+section{margin-top:34px}
+h2{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);
+margin:0 0 4px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.sub{font-size:11px;color:var(--dim);margin:6px 0 10px}
 .tblwrap{overflow-x:auto}table{border-collapse:collapse;width:100%;white-space:nowrap}
-th{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
-text-align:right;padding:8px 12px;border-bottom:1px solid var(--line)}
-th.l,td.l{text-align:left}td{padding:7px 12px;text-align:right;border-bottom:1px solid var(--line2);font-size:12.5px}
+th{font-size:9.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+text-align:right;padding:7px 12px;border-bottom:1px solid var(--line)}
+th.l,td.l{text-align:left}td{padding:6px 12px;text-align:right;border-bottom:1px solid #10151b;font-size:12.5px}
 th.gsep,td.gsep{border-left:1px solid var(--line)}
-tr.champ td{background:var(--wash)}.tag{font-size:9.5px;letter-spacing:.12em;color:var(--amb);
-border:1px solid #e0cab3;background:#faf3ea;padding:1px 7px;border-radius:4px;margin-left:8px}
+tr.champ td{background:#0d1118}.tag{font-size:9px;letter-spacing:.12em;color:var(--amb);
+border:1px solid #3a2f16;padding:1px 6px;border-radius:3px;margin-left:8px}
 .grp th{border-bottom:none;color:var(--amb);letter-spacing:.2em;padding-bottom:2px}
 .pos{color:var(--grn)}.neg{color:var(--red)}.mut{color:var(--muted)}.amb{color:var(--amb)}
-.flag{font-size:9.5px;letter-spacing:.1em;color:var(--red);border:1px solid #e4c6bd;background:#faf0ec;padding:1px 7px;border-radius:4px}
-.await{color:var(--dim);font-size:12.5px;padding:16px 2px;letter-spacing:.03em}
-.bar{height:10px;background:#efe9db;border:1px solid var(--line);border-radius:5px;position:relative;
-max-width:520px;margin:12px 0 8px}
-.bar i{position:absolute;left:0;top:0;bottom:0;background:var(--grn);border-radius:5px}
-.bar b{position:absolute;right:0;top:-3px;bottom:-3px;width:2px;background:var(--amb)}
-.gapline{font-size:13px;color:var(--ink)}
-footer{margin-top:36px;border-top:1px solid var(--line);padding-top:14px;font-size:11px;color:var(--dim);max-width:76ch}
-input:focus-visible,button:focus-visible{outline:2px solid var(--amb);outline-offset:1px}
-@media (max-width:640px){
-.wrap{padding:0 14px 64px}
-header{padding:18px 0 14px;gap:4px 14px}
-.brand{font-size:15px}
-section{margin-top:20px;padding:16px 14px 18px;border-radius:10px}
-th,td{padding-left:8px;padding-right:8px}
-}
-</style></head><body>
-<div id=hlgate style="position:fixed;inset:0;z-index:9999;background:#f4f0e8;display:flex;
-align-items:center;justify-content:center;font:14px -apple-system,BlinkMacSystemFont,'Segoe UI',Inter,sans-serif;color:#2c2721">
-<form id=hlf style="text-align:center;background:#fcfaf5;border:1px solid #e4dccf;border-radius:12px;padding:34px 38px">
-<div style="letter-spacing:.2em;color:#a05c33;margin-bottom:16px;font-weight:600">NUSANTARA — SIGN IN</div>
-<input id=hu placeholder=username autocomplete=username style="display:block;margin:8px auto;padding:9px 12px;
-background:#fff;border:1px solid #d9cfbc;color:#2c2721;border-radius:6px;width:220px;font:inherit">
-<input id=hp type=password placeholder=password autocomplete=current-password style="display:block;margin:8px auto;
-padding:9px 12px;background:#fff;border:1px solid #d9cfbc;color:#2c2721;border-radius:6px;width:220px;font:inherit">
-<button style="margin-top:12px;padding:8px 26px;background:#a05c33;border:0;border-radius:6px;
-color:#fcfaf5;font-weight:600;cursor:pointer;letter-spacing:.08em">ENTER</button>
-<div id=hle style="color:#b05244;font-size:11px;height:14px;margin-top:10px"></div>
+.flag{font-size:9px;letter-spacing:.1em;color:var(--red);border:1px solid #3d1d26;padding:1px 6px;border-radius:3px}
+.await{color:var(--dim);font-size:12px;padding:14px 2px;letter-spacing:.05em}
+.bar{height:8px;background:#11161c;border:1px solid var(--line);border-radius:2px;position:relative;
+max-width:520px;margin:10px 0 6px}
+.bar i{position:absolute;left:0;top:0;bottom:0;background:var(--grn);border-radius:2px}
+.bar b{position:absolute;right:0;top:-3px;bottom:-3px;width:1px;background:var(--amb)}
+.gapline{font-size:12px;color:var(--ink)}
+footer{margin-top:44px;border-top:1px solid var(--line);padding-top:10px;font-size:10px;color:var(--dim)}
+</style></head><body><meta name="robots" content="noindex,nofollow">
+<div id=hlgate style="position:fixed;inset:0;z-index:9999;background:#060809;display:flex;
+align-items:center;justify-content:center;font:14px ui-monospace,SFMono-Regular,Menlo,monospace;color:#d8e1e8">
+<form id=hlf style="text-align:center">
+<div style="letter-spacing:.2em;color:#e0a43c;margin-bottom:14px">NUSANTARA — SIGN IN</div>
+<input id=hu placeholder=username autocomplete=username style="display:block;margin:6px auto;padding:8px 10px;
+background:#0b0f13;border:1px solid #1a212a;color:#d8e1e8;border-radius:3px;width:200px">
+<input id=hp type=password placeholder=password autocomplete=current-password style="display:block;margin:6px auto;
+padding:8px 10px;background:#0b0f13;border:1px solid #1a212a;color:#d8e1e8;border-radius:3px;width:200px">
+<button style="margin-top:10px;padding:7px 22px;background:#e0a43c;border:0;border-radius:3px;
+color:#060809;font-weight:600;cursor:pointer">ENTER</button>
+<div id=hle style="color:#ef6079;font-size:11px;height:14px;margin-top:8px"></div>
 </form></div>
 <script>(function(){var g=document.getElementById("hlgate");
 if(sessionStorage.getItem("hl_ok")==="1"){g.remove();return}
