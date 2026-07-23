@@ -1,0 +1,1205 @@
+{
+ "generated_utc": "2026-07-23 19:41 UTC",
+ "title": "NUSANTARA FUTURES",
+ "disclaimer": "research/paper only; no number here is a promise",
+ "sections": {
+  "book": {
+   "constructions": [
+    {
+     "name": "champion",
+     "champion": true,
+     "code": [
+      "pine/ip_volmanaged_champion_v1.pine",
+      "mt5/VolManagedChampion.mq5"
+     ],
+     "generic": {
+      "cagr_p50": 0.053,
+      "maxdd_p50": -0.1539,
+      "calmar_p50": 0.3421,
+      "p_dd_25": 0.0442,
+      "horizon_days": 5340
+     },
+     "venue": {
+      "cagr_p50": 0.0531,
+      "maxdd_p50": -0.142,
+      "calmar_p50": 0.3684,
+      "p_dd_25": 0.0327,
+      "horizon_days": 3367
+     }
+    },
+    {
+     "name": "to_gold_lead",
+     "champion": false,
+     "code": [
+      "pine/to_gold_lead_20260703.pine",
+      "pine/mc10k_to_gold_lead_venue-finex_20260720.pine"
+     ],
+     "generic": {
+      "cagr_p50": 0.0564,
+      "maxdd_p50": -0.1333,
+      "calmar_p50": 0.4219,
+      "p_dd_25": 0.0098,
+      "horizon_days": 5340
+     },
+     "venue": {
+      "cagr_p50": 0.0505,
+      "maxdd_p50": -0.1313,
+      "calmar_p50": 0.3797,
+      "p_dd_25": 0.0181,
+      "horizon_days": 3367
+     }
+    },
+    {
+     "name": "gold_basin",
+     "champion": false,
+     "code": [
+      "pine/gold_basin_20260706.pine",
+      "mt5/GoldBasin.mq5",
+      "pine/mc10k_gold_basin_venue-finex_20260720.pine"
+     ],
+     "generic": {
+      "cagr_p50": 0.0575,
+      "maxdd_p50": -0.111,
+      "calmar_p50": 0.5127,
+      "p_dd_25": 0.0016,
+      "horizon_days": 5340
+     },
+     "venue": {
+      "cagr_p50": 0.047,
+      "maxdd_p50": -0.1154,
+      "calmar_p50": 0.4034,
+      "p_dd_25": 0.0065,
+      "horizon_days": 3367
+     }
+    },
+    {
+     "name": "sleeve_erc",
+     "champion": false,
+     "code": [],
+     "generic": {
+      "cagr_p50": 0.0525,
+      "maxdd_p50": -0.114,
+      "calmar_p50": 0.4562,
+      "p_dd_25": 0.0027,
+      "horizon_days": 5340
+     },
+     "venue": {
+      "cagr_p50": 0.0421,
+      "maxdd_p50": -0.1075,
+      "calmar_p50": 0.3889,
+      "p_dd_25": 0.0028,
+      "horizon_days": 3367
+     }
+    },
+    {
+     "name": "rsi2_cand",
+     "champion": false,
+     "code": [
+      "pine/fl_rsi2_thr9_20260719.pine"
+     ],
+     "generic": {
+      "cagr_p50": 0.0468,
+      "maxdd_p50": -0.1572,
+      "calmar_p50": 0.295,
+      "p_dd_25": 0.0478,
+      "horizon_days": 5340
+     },
+     "venue": {
+      "cagr_p50": 0.0313,
+      "maxdd_p50": -0.1341,
+      "calmar_p50": 0.2301,
+      "p_dd_25": 0.0238,
+      "horizon_days": 3367
+     }
+    },
+    {
+     "name": "opt10_erc",
+     "champion": false,
+     "code": [],
+     "generic": {
+      "cagr_p50": 0.0487,
+      "maxdd_p50": -0.0834,
+      "calmar_p50": 0.5791,
+      "p_dd_25": 0.0,
+      "horizon_days": 5340
+     },
+     "venue": {
+      "cagr_p50": 0.035,
+      "maxdd_p50": -0.0851,
+      "calmar_p50": 0.4089,
+      "p_dd_25": 0.0002,
+      "horizon_days": 3367
+     }
+    }
+   ],
+   "generic_horizon_days": 5340,
+   "venue_horizon_days": 3367,
+   "generic_date": "2026-07-20",
+   "venue_date": "2026-07-20",
+   "dd_line": -0.25
+  },
+  "optimization": {
+   "frontier_best": [
+    {
+     "family": "champion",
+     "calmar": 0.41,
+     "cagr": 0.0561,
+     "maxdd": 0.137,
+     "frontier_points": 44
+    },
+    {
+     "family": "gold_lead",
+     "calmar": 0.696,
+     "cagr": 0.082,
+     "maxdd": 0.1178,
+     "frontier_points": 20
+    },
+    {
+     "family": "rsi2",
+     "calmar": 0.444,
+     "cagr": 0.0289,
+     "maxdd": 0.0652,
+     "frontier_points": 14
+    }
+   ],
+   "frontier_objective": "maximize CAGR, minimize MaxDD (non-dominated set per sleeve; INCUMBENT included so you can see what dominates the registered code)",
+   "challenger_pass_count": {
+    "generic": 5,
+    "venue": 5
+   },
+   "challenger_passes": [
+    {
+     "panel": "generic",
+     "family": "to_gold_lead",
+     "calmar": 0.599,
+     "cagr": 0.0651,
+     "maxdd": 0.1088
+    },
+    {
+     "panel": "generic",
+     "family": "to_gold_lead",
+     "calmar": 0.58,
+     "cagr": 0.0636,
+     "maxdd": 0.1098
+    },
+    {
+     "panel": "generic",
+     "family": "to_gold_lead",
+     "calmar": 0.501,
+     "cagr": 0.0592,
+     "maxdd": 0.1182
+    },
+    {
+     "panel": "generic",
+     "family": "to_gold_lead",
+     "calmar": 0.47,
+     "cagr": 0.057,
+     "maxdd": 0.1212
+    },
+    {
+     "panel": "generic",
+     "family": "to_gold_lead",
+     "calmar": 0.539,
+     "cagr": 0.0566,
+     "maxdd": 0.1049
+    },
+    {
+     "panel": "venue",
+     "family": "to_gold_lead",
+     "calmar": 0.496,
+     "cagr": 0.054,
+     "maxdd": 0.1089
+    },
+    {
+     "panel": "venue",
+     "family": "to_gold_lead",
+     "calmar": 0.425,
+     "cagr": 0.0508,
+     "maxdd": 0.1196
+    },
+    {
+     "panel": "venue",
+     "family": "rsi2_cand",
+     "calmar": 0.318,
+     "cagr": 0.0331,
+     "maxdd": 0.104
+    },
+    {
+     "panel": "venue",
+     "family": "rsi2_cand",
+     "calmar": 0.365,
+     "cagr": 0.0382,
+     "maxdd": 0.1045
+    },
+    {
+     "panel": "venue",
+     "family": "rsi2_cand",
+     "calmar": 0.381,
+     "cagr": 0.0334,
+     "maxdd": 0.0876
+    }
+   ],
+   "pbo_honest_by_family": [
+    {
+     "family": "to_gold_lead",
+     "generic": 0.671,
+     "venue": 0.614,
+     "high": true
+    },
+    {
+     "family": "gold_basin",
+     "generic": 0.557,
+     "venue": 0.471,
+     "high": true
+    },
+    {
+     "family": "rsi2_cand",
+     "generic": 0.629,
+     "venue": 0.857,
+     "high": true
+    },
+    {
+     "family": "opt10_erc",
+     "generic": 0.757,
+     "venue": 0.486,
+     "high": true
+    }
+   ],
+   "high_pbo_threshold": 0.5,
+   "improve_candidates": {
+    "status": "UPGRADE-CANDIDATES (human-gated; NOT auto-promoted; win = full-sample CAGR-up AND DD-down dominance PLUS >=2/3 disjoint-thirds dominance [different-data evidence]; persistence = >=3 win-dates EACH >=7d apart (greedy-spaced; near-duplicate reruns don't count) spanning >=14 calendar days; book_admissible = Calmar >= 0.97x champion [Hans tolerance band 2026-07-16, Calmar only])",
+    "total": 0,
+    "by_family": {},
+    "date": "2026-07-20"
+   },
+   "optimize_10pct": {
+    "date": "2026-07-11",
+    "pbo_honest_full_search": 0.414,
+    "pbo_finalists_only_laundered": 0.229,
+    "gold_robustness": 1.0,
+    "rsi_robustness": 0.995
+   },
+   "research_candidates": {
+    "total": 9,
+    "statuses": [
+     "RESEARCH-UNVALIDATED"
+    ],
+    "latest": [
+     "mc10k_to_gold_lead_generic_20260720",
+     "mc10k_to_gold_lead_venue-finex_20260720",
+     "mc10k_rsi2_cand_venue-finex_20260720"
+    ]
+   }
+  },
+  "daily_predictions": {
+   "date": "2026-07-20",
+   "signals": [
+    {
+     "market": "US500",
+     "signal": "long",
+     "detail": {
+      "pattern": "pullback_in_uptrend",
+      "hit_rate": 0.553
+     }
+    }
+   ],
+   "n_pass": 10,
+   "validated_patterns": [
+    {
+     "name": "consecutive_down3_rev",
+     "market": "US100",
+     "direction": "long",
+     "n": 392,
+     "hit": 0.589,
+     "base": 0.5369,
+     "lift": 1.1,
+     "perm_p": 0.01,
+     "verdict": "PASS"
+    },
+    {
+     "name": "consecutive_down3_rev",
+     "market": "UK100",
+     "direction": "long",
+     "n": 499,
+     "hit": 0.587,
+     "base": 0.5103,
+     "lift": 1.15,
+     "perm_p": 0.002,
+     "verdict": "PASS"
+    },
+    {
+     "name": "consecutive_down3_rev",
+     "market": "US500",
+     "direction": "long",
+     "n": 406,
+     "hit": 0.574,
+     "base": 0.5273,
+     "lift": 1.09,
+     "perm_p": 0.018,
+     "verdict": "PASS"
+    },
+    {
+     "name": "rsi2_oversold_in_uptrend",
+     "market": "XAUUSD",
+     "direction": "long",
+     "n": 284,
+     "hit": 0.574,
+     "base": 0.5107,
+     "lift": 1.12,
+     "perm_p": 0.018,
+     "verdict": "PASS"
+    },
+    {
+     "name": "rsi2_oversold_in_uptrend",
+     "market": "UK100",
+     "direction": "long",
+     "n": 279,
+     "hit": 0.573,
+     "base": 0.5103,
+     "lift": 1.12,
+     "perm_p": 0.0299,
+     "verdict": "PASS"
+    },
+    {
+     "name": "pullback_in_uptrend",
+     "market": "US500",
+     "direction": "long",
+     "n": 1526,
+     "hit": 0.553,
+     "base": 0.5273,
+     "lift": 1.05,
+     "perm_p": 0.01,
+     "verdict": "PASS"
+    },
+    {
+     "name": "pullback_in_uptrend",
+     "market": "XAUUSD",
+     "direction": "long",
+     "n": 1481,
+     "hit": 0.546,
+     "base": 0.5107,
+     "lift": 1.07,
+     "perm_p": 0.002,
+     "verdict": "PASS"
+    },
+    {
+     "name": "near_52w_high",
+     "market": "XAUUSD",
+     "direction": "long",
+     "n": 756,
+     "hit": 0.545,
+     "base": 0.5107,
+     "lift": 1.07,
+     "perm_p": 0.018,
+     "verdict": "PASS"
+    },
+    {
+     "name": "vol_compression_breakout_dn",
+     "market": "JP225",
+     "direction": "short",
+     "n": 148,
+     "hit": 0.534,
+     "base": 0.444,
+     "lift": 1.2,
+     "perm_p": 0.014,
+     "verdict": "PASS"
+    },
+    {
+     "name": "rally_in_downtrend",
+     "market": "US100",
+     "direction": "short",
+     "n": 490,
+     "hit": 0.49,
+     "base": 0.43,
+     "lift": 1.14,
+     "perm_p": 0.004,
+     "verdict": "PASS"
+    }
+   ]
+  },
+  "profitability": {
+   "hit_rate": 0.5328,
+   "profit_factor": 1.217,
+   "n_days": 3553,
+   "best_pattern_hit": 0.589,
+   "target": 0.9,
+   "gap": -0.3672,
+   "gap_best_pattern": 0.311,
+   "forward": {
+    "n": 8,
+    "n_days": 4,
+    "hit": 0.0,
+    "profit_factor": 0.0
+   },
+   "honest_note": "Best measured daily hit vs the 90% target. 90% next-day directional accuracy is NOT achievable from close-to-close index/gold data -- base rates are ~52-55% and the honest conditional ceiling observed here is the printed best hit. The target is a tracking line; it will not be engineered via risk distortion. All profitability is net of a 4bp round-trip. ~13 patterns x 6 markets are tested, so survivors carry multiple-testing risk -- the forward ledger is the only clean proof."
+  },
+  "forward_ledger": {
+   "date": "2026-07-20",
+   "last_obs_date": "2026-07-20",
+   "min_forward_days": 126,
+   "rows": [
+    {
+     "name": "champion",
+     "in_ledger": true,
+     "n": 12,
+     "need": 126,
+     "cum": -0.0037,
+     "ann_cagr": -0.0739,
+     "maxdd": 0.006,
+     "calmar": -12.242,
+     "verdict": null
+    },
+    {
+     "name": "gold_basin",
+     "in_ledger": true,
+     "n": 12,
+     "need": 126,
+     "cum": -0.003,
+     "ann_cagr": -0.0612,
+     "maxdd": 0.0056,
+     "calmar": -10.842,
+     "verdict": "ACCUMULATING (12/126 fwd days)"
+    },
+    {
+     "name": "rsi2_cand",
+     "in_ledger": true,
+     "n": 12,
+     "need": 126,
+     "cum": -0.0023,
+     "ann_cagr": -0.0469,
+     "maxdd": 0.0022,
+     "calmar": -20.828,
+     "verdict": "ACCUMULATING (12/126 fwd days)"
+    },
+    {
+     "name": "sleeve_erc",
+     "in_ledger": true,
+     "n": 12,
+     "need": 126,
+     "cum": -0.003,
+     "ann_cagr": -0.0614,
+     "maxdd": 0.0043,
+     "calmar": -14.328,
+     "verdict": "ACCUMULATING (12/126 fwd days)"
+    },
+    {
+     "name": "to_gold_lead",
+     "in_ledger": true,
+     "n": 12,
+     "need": 126,
+     "cum": -0.0037,
+     "ann_cagr": -0.0739,
+     "maxdd": 0.006,
+     "calmar": -12.242,
+     "verdict": "ACCUMULATING (12/126 fwd days)"
+    },
+    {
+     "name": "opt10_erc",
+     "in_ledger": true,
+     "n": 7,
+     "need": 126,
+     "cum": -0.0009,
+     "ann_cagr": -0.0308,
+     "maxdd": 0.0015,
+     "calmar": -20.739,
+     "verdict": "ACCUMULATING (7/126 fwd days)"
+    }
+   ],
+   "note": "Forward = realized OOS days since the ledger started; NOT backfilled. Promotion needs >= 126 fwd days beating champion on CAGR-up AND DD-down. Human-gated."
+  },
+  "loops": [
+   {
+    "label": "mc10k gate \u2014 generic panel",
+    "path": "verdicts/mc10k_gate.json",
+    "status": "ok",
+    "mtime": "2026-07-20 16:52 UTC",
+    "age_days": 3.1
+   },
+   {
+    "label": "mc10k gate \u2014 Finex venue panel",
+    "path": "verdicts/mc10k_gate_venue.json",
+    "status": "ok",
+    "mtime": "2026-07-20 16:52 UTC",
+    "age_days": 3.1
+   },
+   {
+    "label": "forward ledger summary",
+    "path": "verdicts/futures_forward_summary.json",
+    "status": "ok",
+    "mtime": "2026-07-20 16:52 UTC",
+    "age_days": 3.1
+   },
+   {
+    "label": "research candidates",
+    "path": "research_candidates.json",
+    "status": "ok",
+    "mtime": "2026-07-20 16:52 UTC",
+    "age_days": 3.1
+   },
+   {
+    "label": "optimize-10pct results",
+    "path": "optimize_10pct_results.json",
+    "status": "ok",
+    "mtime": "2026-07-11 04:13 UTC",
+    "age_days": 12.6
+   },
+   {
+    "label": "futures patterns (predictions)",
+    "path": "docs/futures_patterns.json",
+    "status": "ok",
+    "mtime": "2026-07-20 16:52 UTC",
+    "age_days": 3.1
+   },
+   {
+    "label": "improve candidates",
+    "path": "improve_candidates.json",
+    "status": "ok",
+    "mtime": "2026-07-20 16:52 UTC",
+    "age_days": 3.1
+   },
+   {
+    "label": "pareto frontier",
+    "path": "pareto_frontier.json",
+    "status": "ok",
+    "mtime": "2026-07-20 16:52 UTC",
+    "age_days": 3.1
+   }
+  ],
+  "code_registry": {
+   "verified": [
+    {
+     "name": "ip_volmanaged_champion_v1",
+     "status": "VALIDATED-CHAMPION",
+     "created": "2026-06-27",
+     "markets": "XAUUSD,US30,US100,US500,UK100,JP225",
+     "metrics": {
+      "full_cagr": "8.6%",
+      "full_maxdd": "22.7%",
+      "full_calmar": 0.38,
+      "oos2016_calmar": 0.76,
+      "PBO": "23.7%"
+     },
+     "paper": "Moreira-Muir 2659431 (+ Cederburg 3357038 skeptic) / aligrithm",
+     "note": "direction-free vol-managed buy-hold-of-6; value = drawdown control not return; passed protocol (positive OOS both halves, PBO moderate).",
+     "code": [
+      "mt5/VolManagedChampion.mq5",
+      "pine/ip_volmanaged_champion_v1.pine"
+     ],
+     "gate": {
+      "family": "champion",
+      "generic": {
+       "n_paths": 10000,
+       "horizon_days": 5340,
+       "cagr_p50": 0.053,
+       "maxdd_p50": -0.1539,
+       "calmar_p50": 0.3421,
+       "p_dd_25": 0.0442
+      },
+      "venue": {
+       "n_paths": 10000,
+       "horizon_days": 3367,
+       "cagr_p50": 0.0531,
+       "maxdd_p50": -0.142,
+       "calmar_p50": 0.3684,
+       "p_dd_25": 0.0327
+      }
+     }
+    }
+   ],
+   "unverified": [
+    {
+     "name": "hg_erc_gold_rsi_20260706",
+     "status": "RESEARCH-UNVALIDATED",
+     "title": "Holy Grail sleeve-ERC (gold_lead + rsi2)",
+     "calmar": 0.523,
+     "cagr": 0.044,
+     "maxdd": 0.085,
+     "pbo": 0.357,
+     "caveats": "frontier #2 Bridgewater Holy Grail, sleeve-level ERC; RAW un-levered Calmar 0.523 (reproducible, leverage-invariant) vs best single 0.445 / champion 0.38; 2-STREAM not 3 (champion<->gold_lead 0.99 redundant; rsi2 the real diversifier at 0.56-0.58 corr); combo weights 41-55% on the UNVALIDATED cost-fragile rsi2 CANDIDATE -> edge conditional on rsi2 clearing its own gate; causal-vol-matched CAGR-up/DD-down holds but smaller (8.5%/22.3% vs champion 8.4%/26.6%); needs forward ledger + human sign-off; fund names/~80% = [EST]. Different-model (Sonnet) gate REJECTED-as-worded -> revised: causal trailing-vol lever (no lookahead) + PBO 0.357 added + reframed 2-stream.",
+     "code": [],
+     "gate": null,
+     "mc10k": null
+    },
+    {
+     "name": "opt10_20260711",
+     "status": "RESEARCH-UNVALIDATED",
+     "title": "ERC gold*+rsi* (optimized)",
+     "calmar": 0.779,
+     "cagr": 0.0489,
+     "maxdd": 0.0628,
+     "pbo": 0.414,
+     "caveats": "swarm-optimized rsi2-dominant ERC combo; IN-SAMPLE; honest PBO 0.414 (near-fail if >=0.40); 10% CAGR needs 2.04x lever -> 13% DD at 0% (futures) financing, UNREACHABLE at 5.5% CFD financing; rsi2 cost-fragile; forward-ledger + human sign-off required before any promotion",
+     "code": [],
+     "gate": null,
+     "mc10k": null
+    },
+    {
+     "name": "fl_breadth_volmanaged_v1_20260720",
+     "status": "RESEARCH-UNVALIDATED",
+     "title": "Breadth + vol-managed ensemble (6 markets)",
+     "calmar": 0.414,
+     "cagr": 0.0309,
+     "maxdd": 0.0745,
+     "pbo": 0.586,
+     "caveats": "6-signal Pine proxy of the 25-family lab; single-leg != 6-basket; PBO on tv-selection ~0.57",
+     "code": [
+      "pine/fl_breadth_volmanaged_v1_20260720.pine"
+     ],
+     "gate": null,
+     "mc10k": null
+    },
+    {
+     "name": "to_to_gold_lead_20260720",
+     "status": "RESEARCH-UNVALIDATED",
+     "title": "Time-orthogonal overlay: gold_lead",
+     "calmar": 0.44,
+     "cagr": 0.056,
+     "maxdd": 0.1274,
+     "pbo": 0.014,
+     "caveats": "time-orthogonal overlay; PBO 0.014; timing-null p 0.01; pre-committed multipliers; needs human sign-off + forward ledger",
+     "code": [
+      "pine/to_gold_lead_20260703.pine"
+     ],
+     "gate": {
+      "family": "to_gold_lead",
+      "generic": {
+       "n_paths": 10000,
+       "horizon_days": 5340,
+       "cagr_p50": 0.0564,
+       "maxdd_p50": -0.1333,
+       "calmar_p50": 0.4219,
+       "p_dd_25": 0.0098
+      },
+      "venue": {
+       "n_paths": 10000,
+       "horizon_days": 3367,
+       "cagr_p50": 0.0505,
+       "maxdd_p50": -0.1313,
+       "calmar_p50": 0.3797,
+       "p_dd_25": 0.0181
+      }
+     },
+     "mc10k": null
+    },
+    {
+     "name": "to_to_stack_qualified_20260720",
+     "status": "RESEARCH-UNVALIDATED",
+     "title": "Stack of QUALIFIED (gold_lead+breadth_div+corr_lead+seasonal+contagion)",
+     "calmar": 0.435,
+     "cagr": 0.0537,
+     "maxdd": 0.1234,
+     "pbo": 0.014,
+     "caveats": "time-orthogonal overlay; PBO 0.014; timing-null p 0.01; pre-committed multipliers; needs human sign-off + forward ledger",
+     "code": [],
+     "gate": null,
+     "mc10k": null
+    },
+    {
+     "name": "to_to_stack_all5_20260720",
+     "status": "RESEARCH-UNVALIDATED",
+     "title": "Stack of all 5 (control)",
+     "calmar": 0.435,
+     "cagr": 0.0537,
+     "maxdd": 0.1234,
+     "pbo": 0.014,
+     "caveats": "time-orthogonal overlay; PBO 0.014; timing-null p 0.01; pre-committed multipliers; needs human sign-off + forward ledger",
+     "code": [],
+     "gate": null,
+     "mc10k": null
+    },
+    {
+     "name": "mc10k_to_gold_lead_generic_20260720",
+     "status": "RESEARCH-UNVALIDATED",
+     "title": "MC-10k adoption-gate pass (to_gold_lead, generic panel)",
+     "calmar": 0.599,
+     "cagr": 0.0651,
+     "maxdd": 0.1088,
+     "pbo": null,
+     "caveats": "passed MC-10k adoption gate vs incumbent (p50 CAGR&Calmar >=, tail not worse) + both halves positive; IN-SAMPLE; forward ledger + human sign-off required; WARNING family PBO 0.671 >= 0.5 -- selection is coin-flip, treat as parameter-basin evidence only",
+     "code": [
+      "pine/mc10k_to_gold_lead_20260713.pine",
+      "pine/mc10k_to_gold_lead_generic_20260720.pine",
+      "pine/to_gold_lead_20260703.pine"
+     ],
+     "gate": {
+      "family": "to_gold_lead",
+      "generic": {
+       "n_paths": 10000,
+       "horizon_days": 5340,
+       "cagr_p50": 0.0564,
+       "maxdd_p50": -0.1333,
+       "calmar_p50": 0.4219,
+       "p_dd_25": 0.0098
+      },
+      "venue": {
+       "n_paths": 10000,
+       "horizon_days": 3367,
+       "cagr_p50": 0.0505,
+       "maxdd_p50": -0.1313,
+       "calmar_p50": 0.3797,
+       "p_dd_25": 0.0181
+      }
+     },
+     "mc10k": {
+      "panel": "generic",
+      "n_paths": 10000,
+      "horizon_days": 5340,
+      "cagr_p50": 0.0657,
+      "maxdd_p50": -0.1279,
+      "calmar_p50": 0.51,
+      "p_dd_25": 0.0081,
+      "incumbent_calmar_p50": 0.4251
+     }
+    },
+    {
+     "name": "mc10k_to_gold_lead_venue-finex_20260720",
+     "status": "RESEARCH-UNVALIDATED",
+     "title": "MC-10k adoption-gate pass (to_gold_lead, venue-finex panel)",
+     "calmar": 0.496,
+     "cagr": 0.054,
+     "maxdd": 0.1089,
+     "pbo": null,
+     "caveats": "passed MC-10k adoption gate vs incumbent (p50 CAGR&Calmar >=, tail not worse) + both halves positive; IN-SAMPLE; forward ledger + human sign-off required; WARNING family PBO 0.614 >= 0.5 -- selection is coin-flip, treat as parameter-basin evidence only",
+     "code": [
+      "pine/mc10k_to_gold_lead_20260713.pine",
+      "pine/mc10k_to_gold_lead_venue-finex_20260720.pine",
+      "pine/to_gold_lead_20260703.pine"
+     ],
+     "gate": {
+      "family": "to_gold_lead",
+      "generic": {
+       "n_paths": 10000,
+       "horizon_days": 5340,
+       "cagr_p50": 0.0564,
+       "maxdd_p50": -0.1333,
+       "calmar_p50": 0.4219,
+       "p_dd_25": 0.0098
+      },
+      "venue": {
+       "n_paths": 10000,
+       "horizon_days": 3367,
+       "cagr_p50": 0.0505,
+       "maxdd_p50": -0.1313,
+       "calmar_p50": 0.3797,
+       "p_dd_25": 0.0181
+      }
+     },
+     "mc10k": {
+      "panel": "venue-finex",
+      "n_paths": 10000,
+      "horizon_days": 3367,
+      "cagr_p50": 0.054,
+      "maxdd_p50": -0.128,
+      "calmar_p50": 0.4169,
+      "p_dd_25": 0.0135,
+      "incumbent_calmar_p50": 0.3753
+     }
+    },
+    {
+     "name": "mc10k_rsi2_cand_venue-finex_20260720",
+     "status": "RESEARCH-UNVALIDATED",
+     "title": "MC-10k adoption-gate pass (rsi2_cand, venue-finex panel)",
+     "calmar": 0.381,
+     "cagr": 0.0334,
+     "maxdd": 0.0876,
+     "pbo": null,
+     "caveats": "passed MC-10k adoption gate vs incumbent (p50 CAGR&Calmar >=, tail not worse) + both halves positive; IN-SAMPLE; forward ledger + human sign-off required; WARNING family PBO 0.857 >= 0.5 -- selection is coin-flip, treat as parameter-basin evidence only",
+     "code": [],
+     "gate": {
+      "family": "rsi2_cand",
+      "generic": {
+       "n_paths": 10000,
+       "horizon_days": 5340,
+       "cagr_p50": 0.0468,
+       "maxdd_p50": -0.1572,
+       "calmar_p50": 0.295,
+       "p_dd_25": 0.0478
+      },
+      "venue": {
+       "n_paths": 10000,
+       "horizon_days": 3367,
+       "cagr_p50": 0.0313,
+       "maxdd_p50": -0.1341,
+       "calmar_p50": 0.2301,
+       "p_dd_25": 0.0238
+      }
+     },
+     "mc10k": {
+      "panel": "venue-finex",
+      "n_paths": 10000,
+      "horizon_days": 3367,
+      "cagr_p50": 0.0331,
+      "maxdd_p50": -0.093,
+      "calmar_p50": 0.3504,
+      "p_dd_25": 0.0005,
+      "incumbent_calmar_p50": 0.2295
+     }
+    }
+   ],
+   "counts": {
+    "verified": 1,
+    "unverified": 9
+   }
+  },
+  "code_factory": {
+   "strategies": 1,
+   "hypotheses_pending": 3,
+   "hypotheses": [
+    {
+     "id": "abnormal_volume",
+     "title": "Abnormal-volume next-day continuation",
+     "paper": "Bajo 2010, SSRN 675587",
+     "data_ok": true,
+     "note": null
+    },
+    {
+     "id": "vwap_regime",
+     "title": "VWAP regime filter (daily proxy of intraday VWAP day-trade)",
+     "paper": "Zarattini-Aziz 2023",
+     "data_ok": true,
+     "note": "true paper strategy is intraday 1-min QQQ; only a daily volume-weighted-price regime proxy is testable here"
+    },
+    {
+     "id": "turnover_factor",
+     "title": "Turnover factor / volume-derived hedging portfolio",
+     "paper": "Lo-Wang 2009, SSRN 1405583",
+     "data_ok": false,
+     "note": "needs shares-outstanding to form turnover; equity indices have no clean turnover -> not testable on this data"
+    }
+   ],
+   "pine_files": 117,
+   "pine_dated": 112,
+   "pine_bases": [
+    "fl_breadth_volmanaged_v1",
+    "fl_rsi2_thr10",
+    "fl_rsi2_thr12",
+    "fl_rsi2_thr4",
+    "fl_rsi2_thr5",
+    "fl_rsi2_thr6",
+    "fl_rsi2_thr8",
+    "fl_rsi2_thr9",
+    "gold_basin",
+    "mc10k_gold_basin_venue-finex",
+    "mc10k_to_gold_lead",
+    "mc10k_to_gold_lead_generic",
+    "mc10k_to_gold_lead_venue-finex",
+    "to_gold_lead"
+   ],
+   "pine_static": [
+    "ip_volmanaged_champion_v1.pine",
+    "ivb_fabio_us100.pine",
+    "ivb_orb_delta_CANDIDATE.pine",
+    "ivb_orb_us100_minimal.pine",
+    "nr_semivar_tilt.pine"
+   ],
+   "mt5_eas": [
+    "FaberVaaleUS100.mq5",
+    "FabioValentini_ORB.mq5",
+    "GoldBasin.mq5",
+    "GoldBasinXAU.mq5",
+    "VolManagedChampion.mq5",
+    "export_m5.mq5"
+   ],
+   "mt5_other": [
+    "presets"
+   ],
+   "factory_py": true,
+   "factory_state": {
+    "i": 0
+   },
+   "factory_state_status": "ok"
+  },
+  "test_counts": {
+   "mc10k": [
+    {
+     "family": "champion",
+     "generic": {
+      "n_paths": 10000,
+      "horizon_days": 5340,
+      "cagr_p50": 0.053,
+      "maxdd_p50": -0.1539,
+      "calmar_p50": 0.3421,
+      "p_dd_25": 0.0442
+     },
+     "venue": {
+      "n_paths": 10000,
+      "horizon_days": 3367,
+      "cagr_p50": 0.0531,
+      "maxdd_p50": -0.142,
+      "calmar_p50": 0.3684,
+      "p_dd_25": 0.0327
+     }
+    },
+    {
+     "family": "gold_basin",
+     "generic": {
+      "n_paths": 10000,
+      "horizon_days": 5340,
+      "cagr_p50": 0.0575,
+      "maxdd_p50": -0.111,
+      "calmar_p50": 0.5127,
+      "p_dd_25": 0.0016
+     },
+     "venue": {
+      "n_paths": 10000,
+      "horizon_days": 3367,
+      "cagr_p50": 0.047,
+      "maxdd_p50": -0.1154,
+      "calmar_p50": 0.4034,
+      "p_dd_25": 0.0065
+     }
+    },
+    {
+     "family": "opt10_erc",
+     "generic": {
+      "n_paths": 10000,
+      "horizon_days": 5340,
+      "cagr_p50": 0.0487,
+      "maxdd_p50": -0.0834,
+      "calmar_p50": 0.5791,
+      "p_dd_25": 0.0
+     },
+     "venue": {
+      "n_paths": 10000,
+      "horizon_days": 3367,
+      "cagr_p50": 0.035,
+      "maxdd_p50": -0.0851,
+      "calmar_p50": 0.4089,
+      "p_dd_25": 0.0002
+     }
+    },
+    {
+     "family": "rsi2_cand",
+     "generic": {
+      "n_paths": 10000,
+      "horizon_days": 5340,
+      "cagr_p50": 0.0468,
+      "maxdd_p50": -0.1572,
+      "calmar_p50": 0.295,
+      "p_dd_25": 0.0478
+     },
+     "venue": {
+      "n_paths": 10000,
+      "horizon_days": 3367,
+      "cagr_p50": 0.0313,
+      "maxdd_p50": -0.1341,
+      "calmar_p50": 0.2301,
+      "p_dd_25": 0.0238
+     }
+    },
+    {
+     "family": "sleeve_erc",
+     "generic": {
+      "n_paths": 10000,
+      "horizon_days": 5340,
+      "cagr_p50": 0.0525,
+      "maxdd_p50": -0.114,
+      "calmar_p50": 0.4562,
+      "p_dd_25": 0.0027
+     },
+     "venue": {
+      "n_paths": 10000,
+      "horizon_days": 3367,
+      "cagr_p50": 0.0421,
+      "maxdd_p50": -0.1075,
+      "calmar_p50": 0.3889,
+      "p_dd_25": 0.0028
+     }
+    },
+    {
+     "family": "to_gold_lead",
+     "generic": {
+      "n_paths": 10000,
+      "horizon_days": 5340,
+      "cagr_p50": 0.0564,
+      "maxdd_p50": -0.1333,
+      "calmar_p50": 0.4219,
+      "p_dd_25": 0.0098
+     },
+     "venue": {
+      "n_paths": 10000,
+      "horizon_days": 3367,
+      "cagr_p50": 0.0505,
+      "maxdd_p50": -0.1313,
+      "calmar_p50": 0.3797,
+      "p_dd_25": 0.0181
+     }
+    }
+   ],
+   "mc10k_total_paths": {
+    "generic": 60000,
+    "venue": 60000
+   },
+   "generic_panel": "generic",
+   "venue_panel": "venue-finex",
+   "n_paths_per_run": 10000,
+   "quant_tests": {
+    "generic": {
+     "configs": 12332,
+     "tests": 17276,
+     "by_family": {
+      "champion": 6918,
+      "gold_lead": 5198,
+      "rsi2": 5160
+     }
+    },
+    "venue": {
+     "configs": 3927,
+     "tests": 5272,
+     "by_family": {
+      "champion": 2116,
+      "gold_lead": 1596,
+      "rsi2": 1560
+     }
+    },
+    "total_tests": 22548,
+    "total_configs": 16259
+   },
+   "sweep": {
+    "date": "2026-07-20",
+    "results": 50
+   },
+   "forward": {
+    "min_days": 126,
+    "ledger_rows": 67,
+    "families": [
+     {
+      "family": "champion",
+      "n": 12,
+      "verdict": null
+     },
+     {
+      "family": "gold_basin",
+      "n": 12,
+      "verdict": "ACCUMULATING (12/126 fwd days)"
+     },
+     {
+      "family": "rsi2_cand",
+      "n": 12,
+      "verdict": "ACCUMULATING (12/126 fwd days)"
+     },
+     {
+      "family": "sleeve_erc",
+      "n": 12,
+      "verdict": "ACCUMULATING (12/126 fwd days)"
+     },
+     {
+      "family": "to_gold_lead",
+      "n": 12,
+      "verdict": "ACCUMULATING (12/126 fwd days)"
+     },
+     {
+      "family": "opt10_erc",
+      "n": 7,
+      "verdict": "ACCUMULATING (7/126 fwd days)"
+     }
+    ],
+    "last_obs_date": "2026-07-20"
+   }
+  },
+  "target_tracker": {
+   "hit_rate": 0.5328,
+   "target": 0.9,
+   "gap": -0.3672,
+   "profit_factor": 1.217,
+   "n_days": 3553,
+   "forward_pf": {
+    "n": 8,
+    "n_days": 4,
+    "hit": 0.0,
+    "profit_factor": 0.0
+   },
+   "frontier_best": [
+    {
+     "family": "champion",
+     "calmar": 0.41,
+     "cagr": 0.0561,
+     "maxdd": 0.137,
+     "frontier_points": 44
+    },
+    {
+     "family": "gold_lead",
+     "calmar": 0.696,
+     "cagr": 0.082,
+     "maxdd": 0.1178,
+     "frontier_points": 20
+    },
+    {
+     "family": "rsi2",
+     "calmar": 0.444,
+     "cagr": 0.0289,
+     "maxdd": 0.0652,
+     "frontier_points": 14
+    }
+   ],
+   "forward_rows": [
+    {
+     "name": "champion",
+     "n": 12,
+     "need": 126,
+     "ann_cagr": -0.0739,
+     "maxdd": 0.006,
+     "calmar": -12.242,
+     "cagr_vs_champion": 0.0,
+     "verdict": null
+    },
+    {
+     "name": "gold_basin",
+     "n": 12,
+     "need": 126,
+     "ann_cagr": -0.0612,
+     "maxdd": 0.0056,
+     "calmar": -10.842,
+     "cagr_vs_champion": 0.0127,
+     "verdict": "ACCUMULATING (12/126 fwd days)"
+    },
+    {
+     "name": "rsi2_cand",
+     "n": 12,
+     "need": 126,
+     "ann_cagr": -0.0469,
+     "maxdd": 0.0022,
+     "calmar": -20.828,
+     "cagr_vs_champion": 0.027,
+     "verdict": "ACCUMULATING (12/126 fwd days)"
+    },
+    {
+     "name": "sleeve_erc",
+     "n": 12,
+     "need": 126,
+     "ann_cagr": -0.0614,
+     "maxdd": 0.0043,
+     "calmar": -14.328,
+     "cagr_vs_champion": 0.0125,
+     "verdict": "ACCUMULATING (12/126 fwd days)"
+    },
+    {
+     "name": "to_gold_lead",
+     "n": 12,
+     "need": 126,
+     "ann_cagr": -0.0739,
+     "maxdd": 0.006,
+     "calmar": -12.242,
+     "cagr_vs_champion": 0.0,
+     "verdict": "ACCUMULATING (12/126 fwd days)"
+    },
+    {
+     "name": "opt10_erc",
+     "n": 7,
+     "need": 126,
+     "ann_cagr": -0.0308,
+     "maxdd": 0.0015,
+     "calmar": -20.739,
+     "cagr_vs_champion": 0.0431,
+     "verdict": "ACCUMULATING (7/126 fwd days)"
+    }
+   ],
+   "survivability": {
+    "generic_horizon_days": 5340,
+    "venue_horizon_days": 3367,
+    "venue_panel": "venue-finex",
+    "esafx": null
+   }
+  }
+ }
+}
