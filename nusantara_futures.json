@@ -1,7 +1,8 @@
 {
- "generated_utc": "2026-07-23 19:41 UTC",
+ "generated_utc": "2026-07-24 03:44 UTC",
  "title": "NUSANTARA FUTURES",
  "disclaimer": "research/paper only; no number here is a promise",
+ "doctrine": "Data doctrine (Hans 2026-07-24): futures research is based on TradingView data, cross-referenced in retrospect to FINEX and ESAFX terminal data points. Generic panel = TradingView exports (data/*.csv); Venue panel = FINEX terminal full history (data/broker/*.csv, 13y); ESAFX terminal = no export has landed in the estate yet.",
  "sections": {
   "book": {
    "constructions": [
@@ -513,56 +514,56 @@
     "path": "verdicts/mc10k_gate.json",
     "status": "ok",
     "mtime": "2026-07-20 16:52 UTC",
-    "age_days": 3.1
+    "age_days": 3.5
    },
    {
     "label": "mc10k gate \u2014 Finex venue panel",
     "path": "verdicts/mc10k_gate_venue.json",
     "status": "ok",
     "mtime": "2026-07-20 16:52 UTC",
-    "age_days": 3.1
+    "age_days": 3.5
    },
    {
     "label": "forward ledger summary",
     "path": "verdicts/futures_forward_summary.json",
     "status": "ok",
     "mtime": "2026-07-20 16:52 UTC",
-    "age_days": 3.1
+    "age_days": 3.5
    },
    {
     "label": "research candidates",
     "path": "research_candidates.json",
     "status": "ok",
     "mtime": "2026-07-20 16:52 UTC",
-    "age_days": 3.1
+    "age_days": 3.5
    },
    {
     "label": "optimize-10pct results",
     "path": "optimize_10pct_results.json",
     "status": "ok",
     "mtime": "2026-07-11 04:13 UTC",
-    "age_days": 12.6
+    "age_days": 13.0
    },
    {
     "label": "futures patterns (predictions)",
     "path": "docs/futures_patterns.json",
     "status": "ok",
     "mtime": "2026-07-20 16:52 UTC",
-    "age_days": 3.1
+    "age_days": 3.5
    },
    {
     "label": "improve candidates",
     "path": "improve_candidates.json",
     "status": "ok",
     "mtime": "2026-07-20 16:52 UTC",
-    "age_days": 3.1
+    "age_days": 3.5
    },
    {
     "label": "pareto frontier",
     "path": "pareto_frontier.json",
     "status": "ok",
     "mtime": "2026-07-20 16:52 UTC",
-    "age_days": 3.1
+    "age_days": 3.5
    }
   ],
   "code_registry": {
@@ -1032,6 +1033,8 @@
    },
    "generic_panel": "generic",
    "venue_panel": "venue-finex",
+   "generic_panel_source": "TradingView exports (data/*.csv, Track A loop)",
+   "venue_panel_source": "FINEX terminal full history (data/broker/*.csv)",
    "n_paths_per_run": 10000,
    "quant_tests": {
     "generic": {
@@ -1198,7 +1201,8 @@
     "generic_horizon_days": 5340,
     "venue_horizon_days": 3367,
     "venue_panel": "venue-finex",
-    "esafx": null
+    "esafx": null,
+    "esafx_note": "awaiting first export \u2014 panel activates automatically when ESAFX terminal data lands under data/broker/ (e.g. an MT5 history export ESAFX_*.csv); ESAFX publishes no public retail trader-count API (OTC CFD venue, unlike IDX's Sectors broker-summary) \u2014 mass-collective counts would require a terminal-side MT5 logging EA, which does not exist in the estate yet"
    }
   }
  }
